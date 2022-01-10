@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="color-scheme" content="light dark">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <link rel="stylesheet" href="css/index.css">
+        <title>ToolKids</title>
+    </head>
+    <body id="id_body" onload="supermap()">
+
+
+        <div id="d1" class="premiere fade">
+            <div id="container">
+                <span id="text_ac"><h1>Bienvenue à toi jeune enfant !</h1></span>
+                <button id="togg1" class="btn">Continuer</button>
+            </div>
+        </div>
+
+
+        <div id="d2" class="Accueil">
+            <h1 id="bjr">Bonjour !</h1>
+            <div id="idDiv_battery">
+                <p id="battery"></p>
+            </div>
+            <div class="c_meteo">
+                <p id="lieu"></p>
+                <div id="meteo"></div>
+            </div>
+            <div>
+                <p id="div_id0"></p>
+                <p id="div_id1"></p>
+                <button id = "networkInfo">Voir Réseau</button>
+                
+            </div> <br>
+            
+            <div id="container_map">
+            <div id="map">Activer le GPS !</div> <br>
+            </div>
+            <button id="togg2">Outils</button>
+        </div>
+
+
+        <div id="d3">
+            <div id="camera">
+                <img id="myImage">
+                <button id="cameraTakePicture">Take a Picture</button> <br>
+            </div>
+            <button id="togg3">Go Back</button> <br>
+            
+            <button id = "getOrientation">GET ORIENTATION</button>
+            <button id = "watchOrientation">WATCH ORIENTATION</button>
+
+            <div class="vitesse">
+                <p class="speed"></p>
+                <p class="jesuisou">Orientation :</p>
+                <p class="podometre">Compteur de pas :</p>
+                <p class="calorie">Calorie brulé : </p>
+            </div>
+        
+            <button id="name" onclick="changerNom()">Changer de nom</button>
+            <button id="browser" onclick="openBrowser()">Trouver des sentier</button>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

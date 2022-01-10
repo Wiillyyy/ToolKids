@@ -1,0 +1,367 @@
+body {
+    background-color: #b1ade2;
+    background-image: url("https://img1.goodfon.com/wallpaper/nbig/d/86/kids-smile-girl-flag-no.jpg");
+    /*min-height: 100vh;*/
+}
+
+/* --- FIRST PAGE --- */
+
+#d1{ 
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+#container{
+    color: #ffffff;
+    font-size: 10px;
+    margin: 43vh 0 0 0; 
+}
+#d1 button{
+    width: 150px;
+    height: 50px;
+    color: #1D3557;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.premiere{
+    -webkit-animation-duration: 5s;animation-duration: 5s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+.fade {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* --- END FIRST PAGE --- */
+
+
+
+/* --- WELCOME PAGE --- */
+
+#bjr{
+    color: white;
+    text-align: center;
+    margin: 25px;
+}
+#d2{
+    display: none;
+}
+#div_id0{
+    color: white;
+    display: none;
+}
+#div_id1{
+    color: white;
+    display: none;
+}
+#map{
+    position: absolute;
+    height:300px;                   /* text area height */
+    width:300px;                   /* text area width */
+    margin: 27px;
+    border: solid 2px white;
+    bottom: 15vh;
+    border-radius: 25px;
+}
+#togg2{
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    height: 50px;
+    width: 200px;
+    bottom: 5vh;
+    margin: 0 0 0 10vh;
+}
+#battery{
+    color: white;
+    position: absolute;
+    right: 3vh;
+}
+#networkInfo{
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    border: solid white 2px;
+    border-radius: 15px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    bottom: 60vh;
+    margin: 0 0 0 10vh;
+}
+
+
+/* --- END WELCOME PAGE --- */
+
+
+
+/* --- MORE... PAGE --- */
+
+#d3{
+    display: none;
+}
+
+#myImage{
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+
+.podometre{
+    color: white;
+    
+}
+.calorie{
+    color: white;
+}
+.jesuisou{
+    color: black;
+}
+
+/* --- END MORE... PAGE --- */
+
+@media screen and (max-width: 420px) {
+    #map{
+        position: absolute;
+        height:300px;                   /* text area height */
+        width:300px;                   /* text area width */
+        border: solid 2px white;
+        bottom: 15vh;
+        border-radius: 25px;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-59%, -25%);
+    }
+    #meteo{
+        font-size: 20px;
+    }
+    .c_meteo{
+        position: absolute;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        height: 100px;
+        width: 300px;
+        bottom: 5vh;
+        top: 25%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #togg2{
+        position: absolute;
+        border: 2px solid white;
+        border-radius: 15px;
+        background-color: transparent;
+        color: white;
+        height: 50px;
+        width: 200px;
+        bottom: 5vh;
+        top: 92%;
+        left: 30%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #battery{
+        color: white;
+        position: absolute;
+        right: 3vh;
+    }
+    #networkInfo{
+        position: absolute;
+        text-align: center;
+        background-color: transparent;
+        border: solid white 2px;
+        border-radius: 15px;
+        height: 50px;
+        width: 200px;
+        color: white;
+        bottom: 60vh;
+        margin: 0 0 0 10vh;
+        top: 38%;
+        left: 28%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }  
+    
+    /*-------------------------------------------*/
+
+    #d3{
+        display: none;
+    }
+    #togg3{
+        border: solid white 2px;
+        border-radius: 15px;
+        width: 100px;
+        background-color: transparent;
+        color: white;
+        margin: 2vh 0 0 2vh;
+    }
+    .vitesse{
+        display: flex;
+        padding: 5px;
+        position: absolute;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+
+        height: 150px;
+        width: 300px;
+        bottom: 5vh;
+        top: 25%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .speed{
+        font-size: 15px;
+        color: black;
+        /*display: none;*/
+    }
+    #camera{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0 10px 0 0;
+    }
+
+    #myImage{
+        margin: 0 0 10px 0;
+        height: 200px;
+        width: 200px;
+        border: none;
+    }
+    
+    .podometre{
+        color: black;
+    }
+    .calorie{
+        color: black;
+    }
+    .internet{
+        position: absolute;
+        display: flex;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        flex-direction: row;
+        justify-content: center;
+        top: 40%;
+        border-radius: 10px;
+        background-color: white;
+        height: 50px;
+        width: 300px;
+
+    }
+    #name{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #browser{
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        
+    }
+    #getOrientation{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border-radius: 30px;
+        border: solid 2px white;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+    #watchOrientation{
+        position: absolute;
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width: 800px) {
+    #map{
+        position: absolute;
+        height:500px;                   /* text area height */
+        width: 600px;                   /* text area width */
+        border: solid 2px white;
+        bottom: 15vh;
+        border-radius: 25px;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-55%, -25%);
+    }
+    #togg2{
+        position: absolute;
+        border: 2px solid white;
+        border-radius: 15px;
+        background-color: transparent;
+        color: white;
+        height: 50px;
+        width: 400px;
+        bottom: 5vh;
+        top: 92%;
+        left: 35%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #battery{
+        color: white;
+        position: absolute;
+        right: 3vh;
+    }
+    #networkInfo{
+        position: absolute;
+        text-align: center;
+        background-color: transparent;
+        border: solid white 2px;
+        border-radius: 15px;
+        height: 50px;
+        width: 400px;
+        color: white;
+        bottom: 60vh;
+        top: 35%;
+        left: 35%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }  
+}

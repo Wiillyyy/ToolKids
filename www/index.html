@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<!-- ============================= Début code ============================== -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+  <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+  <title>Connexion</title>
+  <script src="js/index.js"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link href="signin.css" rel="stylesheet">
+
+</head>
+
+
+<!-- ============================= Page Connexion ============================== -->
+<script src="js/index.js"></script>
+<body class="text-center">
+
+
+  <main class="form-signin">
+
+    <img class="mb-4" src="assets/brand/Logo DT.png" alt="" width="250" >
+    <h1 class="h3 mb-3 fw-normal" id="bjr">Merci de vous connecter</h1>
+
+    <form action="index1.html" method="get">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="Prenom" name="Prenom">
+        <label for="floatingInput">Prénom</label>
+      </div>
+
+      <div class="checkbox mb-3">
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
+      </br><br>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="fingerprint()"><i class="fas fa-fingerprint"></i></button>
+      <script>
+      function onBatteryStatus(info) { 
+        document.getElementById("battery").innerHTML = info.level+" %";
+     }
+     </script>
+    </form>
+  
+
+    <script>
+      window.onload = function() {
+         var NamePrenom = getElementByName('Prenom');
+         var IdPrenom = getElementById('Prenom');
+         localStorage.setItem("prenom",IdPrenom);
+         localStorage.setItem("prenom",NamePrenom);
+      }
+      </script>
+    <!-- ============================= Fin code ============================== -->
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2021–2021</p>
+    </form>
+  </main>
+  <script src="cordova.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+<!-- ============================= Fin code ============================== -->
