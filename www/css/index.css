@@ -1,6 +1,6 @@
 body {
-    background-color: #b1ade2;
-    background-image: url("https://img1.goodfon.com/wallpaper/nbig/d/86/kids-smile-girl-flag-no.jpg");
+    background-color: #ee291b;
+    background-image: url("https://cdn.wallpapersafari.com/6/82/JAP6MV.jpg");
     /*min-height: 100vh;*/
 }
 
@@ -21,7 +21,7 @@ body {
 #d1 button{
     width: 150px;
     height: 50px;
-    color: #1D3557;
+    color: #cc2138;
     background: white;
     border: none;
     border-radius: 50px;
@@ -69,6 +69,7 @@ body {
     display: none;
 }
 #div_id1{
+
     color: white;
     display: none;
 }
@@ -101,11 +102,11 @@ body {
     position: absolute;
     text-align: center;
     background-color: transparent;
-    border: solid white 2px;
-    border-radius: 15px;
-    height: 50px;
+    border: 2px solid #e7e7e7;
+    border-radius: 12px;
+    height: 20px;
     width: 200px;
-    color: white;
+    color: rgb(255, 0, 0);
     bottom: 60vh;
     margin: 0 0 0 10vh;
 }
@@ -113,9 +114,14 @@ body {
 
 /* --- END WELCOME PAGE --- */
 
-
+#d4{
+    display: none;
+}
 
 /* --- MORE... PAGE --- */
+
+
+
 
 #d3{
     display: none;

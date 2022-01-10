@@ -49,7 +49,7 @@ document.addEventListener('deviceready', function(){
 // ---------------------------- BATTERIE -------------------------------------
 
 function onBatteryStatus(info) { 
-   document.getElementById("battery").innerHTML = info.level+" %";
+   document.getElementById("battery").innerHTML ="Tu vas pouvoir t'amuser il te reste : " + info.level+" %";
 }
  //----------------------------- GPS + MAP --------------------------------------
 
