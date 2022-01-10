@@ -1,9 +1,62 @@
 body {
     background-color: #ee291b;
     background-image: url("https://cdn.wallpapersafari.com/6/82/JAP6MV.jpg");
-    /*min-height: 100vh;*/
 }
 
+html {
+    background: url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+    -webkit-animation: 10s linear 0s normal none infinite animate;
+    -moz-animation: 10s linear 0s normal none infinite animate;
+    -ms-animation: 10s linear 0s normal none infinite animate;
+    -o-animation: 10s linear 0s normal none infinite animate;
+    animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-moz-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-ms-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-o-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
 /* --- FIRST PAGE --- */
 
 #d1{ 
@@ -63,6 +116,9 @@ body {
 }
 #d2{
     display: none;
+    background: url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+    -webkit-animation: 10s linear 0s normal none infinite animate;
 }
 #div_id0{
     color: white;
@@ -78,20 +134,44 @@ body {
     height:300px;                   /* text area height */
     width:300px;                   /* text area width */
     margin: 27px;
-    border: solid 2px white;
+    /* border: solid 2px white; */
     bottom: 15vh;
-    border-radius: 25px;
+    border-radius: 150px;
+    --glow-color: rgb(66, 207, 231);
+    --glow-spread-color: rgba(48, 229, 241, 0.781);
+    --enhanced-glow-color: rgb(36, 216, 156);
+    --btn-color: rgb(45, 168, 72);
+    border: .25em solid var(--glow-color);
+    color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-align: center;
+    text-size-adjust: 20%;
 }
 #togg2{
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
     position: absolute;
-    border: 2px solid white;
-    border-radius: 15px;
-    background-color: transparent;
-    color: white;
-    height: 50px;
+    transition: all 0.3s;
+    height: 60px;
     width: 200px;
+    margin: 0 0 0 16vh;
     bottom: 5vh;
-    margin: 0 0 0 10vh;
 }
 #battery{
     color: white;
@@ -99,13 +179,30 @@ body {
     right: 3vh;
 }
 #networkInfo{
+    --glow-color: rgb(230, 64, 64);
+    --glow-spread-color: rgba(201, 87, 87, 0.781);
+    --enhanced-glow-color: rgb(190, 74, 74);
+    --btn-color: rgb(192, 43, 43);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+
     position: absolute;
     text-align: center;
     background-color: transparent;
     border: 2px solid #e7e7e7;
     border-radius: 12px;
     height: 20px;
-    width: 200px;
+    width: 255px;
     color: rgb(255, 0, 0);
     bottom: 60vh;
     margin: 0 0 0 10vh;
@@ -125,6 +222,7 @@ body {
 
 #d3{
     display: none;
+    background: url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
 }
 
 #myImage{
@@ -153,28 +251,33 @@ body {
         width:300px;                   /* text area width */
         border: solid 2px white;
         bottom: 15vh;
-        border-radius: 25px;
+        border-radius: 150px;
         top: 50%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-59%, -25%);
     }
     #meteo{
-        font-size: 20px;
+        font-size: 12px;
+        color: wheat;
+        
     }
     .c_meteo{
         position: absolute;
         border-radius: 15px;
-        background-color: white;
-        color: black;
+        background: url("https://wallpapersmug.com/large/9c6e00/sunny-day-lakes-mountains.jpg");
+        color: wheat;
         text-align: center;
-        height: 100px;
-        width: 300px;
+        height: 110px;
+        width: 350px;
         bottom: 5vh;
         top: 25%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        box-shadow: 5ch;
+        border: linear-gradient(45deg, turquoise, greenyellow) 1;
+        
     }
     #togg2{
         position: absolute;
@@ -202,7 +305,7 @@ body {
         border: solid white 2px;
         border-radius: 15px;
         height: 50px;
-        width: 200px;
+        width: 260px;
         color: white;
         bottom: 60vh;
         margin: 0 0 0 10vh;
@@ -218,12 +321,17 @@ body {
         display: none;
     }
     #togg3{
-        border: solid white 2px;
-        border-radius: 15px;
-        width: 100px;
+        position: absolute;
+        top: 92%;
+        left: 30%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         background-color: transparent;
+        border-radius: 30px;
+        border: solid 2px white;
         color: white;
-        margin: 2vh 0 0 2vh;
+        height: 50px;
+        width: 138px;
     }
     .vitesse{
         display: flex;
@@ -295,7 +403,7 @@ body {
     }
     #browser{
         position: absolute;
-        top: 38%;
+        top: 25.5%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
@@ -304,10 +412,22 @@ body {
         border-radius: 10px;
         
     }
-    #getOrientation{
+
+    #flash {
         position: absolute;
-        top: 90%;
+        top: 18.6%;
         left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        
+    }
+    #Options1{
+        position: absolute;
+        top: 92%;
+        left: 70%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         background-color: transparent;
@@ -315,7 +435,21 @@ body {
         border: solid 2px white;
         color: white;
         height: 50px;
-        width: 200px;
+        width: 138px;
+    }
+
+    #Options2{
+        position: absolute;
+        top: 92%;
+        left: 30%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border-radius: 30px;
+        border: solid 2px white;
+        color: white;
+        height: 50px;
+        width: 138px;
     }
     #watchOrientation{
         position: absolute;
@@ -370,4 +504,14 @@ body {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }  
+}
+
+.textcarte{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
 }

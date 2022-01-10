@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  margin-top: 15px;
+  margin: 0;
+  padding: 0;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+  background: #2980b9
+    url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+  } */
+.bg-c-white {
+  background: linear-gradient(180deg, rgb(0, 0, 0), #2980b9);
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h6 {
+  font-size: 31px;
+  font-weight: bold;
+  margin-top: 2px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.order-card {
+  color: #fff;
+}
+
+.bg-c-white {
+  background: linear-gradient(180deg, rgb(95, 95, 95), #b3b3b3);
+}
+.card .bg-c-white {
+  border-radius: 0px;
+}
+
+.bg-c-orange {
+  background: linear-gradient(45deg, #ff8e4d, #fc6334);
+}
+
+.bg-c-greenLIGHT {
+  background: linear-gradient(45deg, #31c43d, #72d15f);
+}
+
+.bg-c-blue {
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.bg-c-green {
+  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
+.bg-c-yellow {
+  background: linear-gradient(45deg, #ffb64d, #ffcb80);
+}
+
+.bg-c-pink {
+  background: linear-gradient(45deg, #ff5370, #ff869a);
+}
+
+.bg-c-pinkPINK {
+  background: linear-gradient(45deg, #ee9eac, #dda8b1);
+}
+
+.bg-c-BlancNeutre {
+  background: linear-gradient(45deg, #222222, #000000);
+}
+.bg-c-meteoMoche {
+  background: url("https://mocah.org/uploads/posts/4585397-loneliness-people-dark-alone-nature-grass-horizon-rain-sky-clouds-running-landscape.jpg");
+}
+
+.bg-c-meteoBeau {
+  background: url("https://wallpaperaccess.com/full/2033952.jpg");
+  opacity: 90%;
+  background-color: #000000;
+  
+}
+
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  border: none;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+  padding: 35px;
+}
+
+.order-card i {
+  font-size: 26px;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  background-color: none;
+}
+
+#camera{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0 10px 0 0;
+}
+
+#myImage{
+    margin: 0 0 10px 0;
+    height: 200px;
+    width: 200px;
+    border: none;
+}
