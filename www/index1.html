@@ -15,7 +15,12 @@
         <link rel="stylesheet" href="css/index.css">
         <title>ToolKids</title>
     </head>
+
+<!--------------- Fin du Head // Début du Code ------------->
+
     <body id="id_body" onload="supermap()">
+
+<!--------------- SuperMAP, dora la carte ------------->
 
 
         <div id="d1" class="premiere fade">
@@ -24,10 +29,16 @@
                 <button id="togg1" class="btn">Continuer</button>
             </div>
         </div>
+        <!-- <button id="togg1" onclick="changerNom()">Choisir son nom !</button> -->
 
+<!--------------- Fin de la première fade pour acceuillir l'enfant  ------------->
 
         <div id="d2" class="Accueil">
-            <h1 id="bjr">Bonjour !</h1>
+            <h1 id="bjr">Hey !</h1>
+            <script>var prenom1 = localStorage.getItem('prenom');
+                document.getElementById("bjr").innerHTML = "Qui c'est le plus beau c'est " + prenom1 + " ! 😆";</script>
+            
+            </script>
             <button id = "networkInfo">Connecté ? 📶</button>
             <div id="idDiv_battery">
                 <p id="battery"></p>
@@ -47,19 +58,20 @@
             <div id="container_map">
             <div id="map"><br><br>Petit pour jouer avec dora <br> allume le GPS ! 🤦‍♀️</div> <br>
             </div> <h6 class="textcarte">Voici la carte !</h6>
-            <button id="togg2">Page 2</button>
+            <a href="index2.html"><button id="Options1">➡️</button></a>
         </div>
 
 
         <div id="d3">
-            <!-- <div id="camera">
+        <h1>Tu peux continuer à t'amuser ici 🤡</h1>
+            <div id="camera">
                 <img id="myImage">
                 <button id="cameraTakePicture">Prendre une ptite photo</button> <br>
-            </div> -->
-            <button id="togg3">Retour</button> <br>
+            </div>
+            <button id="togg3">⬅️</button> <br>
             
-            <a href="index2.html"><button id ="Options1">Page 3</button></a>
-            <button id = "watchOrientation">WATCH ORIENTATION</button>
+            <a href="index2.html"><button id ="Options1">➡️</button></a>
+            <!-- <button id = "watchOrientation">WATCH ORIENTATION</button> -->
 
             <div class="vitesse">
                 <!-- <p class="speed"></p>
@@ -67,7 +79,7 @@
                 <p class="podometre">Compteur de pas :</p>
                 <p class="calorie">Calorie brulé : </p> -->
             </div>
-            <button id="name" onclick="changerNom()">Changer de nom</button>
+            <!-- <button id="name" onclick="changerNom()">Changer de nom</button> -->
             <button id="flash" onclick="window.plugins.flashlight.toggle()">Allumer/Eteindre la lampe torche 💡</button>
             <button id="browser" class="navigateur" onclick="openBrowser()">Va sur internet comme les grands🔵</button>
         </div>

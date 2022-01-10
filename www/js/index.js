@@ -1,3 +1,5 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+
 //--------------- Fonction OnDeviceReady ----------------------------------
 
 function onDeviceReady(){
@@ -10,16 +12,23 @@ function onDeviceReady(){
   document.getElementById("getOrientation").addEventListener("click", getOrientation);
   document.getElementById("watchOrientation").addEventListener("click", watchOrientation);
   document.getElementById("openBrowser").addEventListener("click", openBrowser);
-  document.addEventListener("backbutton", onBackKeyDown, false);
+  // document.addEventListener("backbutton", onBackKeyDown, false);
   document.addEventListener('deviceready', app.init, false);
   document.getElementById("fingerprint").addEventListener("click", fingerprint);
+
+  document.getElementById("getLanguage").addEventListener("click", getLanguage);
+  document.getElementById("getLocaleName").addEventListener("click", getLocaleName);
+  document.getElementById("getDate").addEventListener("click", getDate);
+  document.getElementById("getCurrency").addEventListener("click", getCurrency);
+  console.log(navigator.globalization);
+  // Plugin pour la date
 }
 //-------------------------------- BACK BUTTON -----------------------------------------
 
-document.addEventListener("backbutton", function (e){
-  e.preventDefault();
-  location.href = "#d2";
-}, false);
+// document.addEventListener("backbutton", function (e){
+//   e.preventDefault();
+//   location.href = "#d2";
+// }, false);
 
 // -------------------------- CAMERA -------------------------------
 
@@ -49,7 +58,7 @@ document.addEventListener('deviceready', function(){
 // ---------------------------- BATTERIE -------------------------------------
 
 function onBatteryStatus(info) { 
-   document.getElementById("battery").innerHTML ="Tu vas pouvoir t'amuser il te reste : " + info.level+" % de 📱";
+   document.getElementById("battery").innerHTML ="Oulah on va s'amuser là il reste : " + info.level+" % de 📱";
 }
  //----------------------------- GPS + MAP --------------------------------------
 
@@ -94,7 +103,7 @@ var callBackGetSuccess = function(data) {
    //alert(country);
 
    var element = document.getElementById("meteo");
-   element.innerHTML = data.main.temp + "°C - " + desc;
+   element.innerHTML = data.main.temp + "°C - Le temps est " + desc;
    var lieu = document.getElementById("lieu");
    lieu.innerHTML = data.name + " - "+ country;
 }
@@ -309,28 +318,86 @@ function openBrowser() {
  }
 }
 
+function openBrowser1() {
+  var url = 'https://www.sesamestreet.org/';
+  var target = '_blank';
+  var options = "location = yes"
+  var ref = cordova.InAppBrowser.open(url, target, options);
+  
+  ref.addEventListener('loadstart', loadstartCallback);
+  ref.addEventListener('loadstop', loadstopCallback);
+  ref.addEventListener('loaderror', loaderrorCallback);
+  ref.addEventListener('exit', exitCallback);
+ 
+  function loadstartCallback(event) {
+     console.log('Loading started: '  + event.url)
+  }
+ 
+  function loadstopCallback(event) {
+     console.log('Loading finished: ' + event.url)
+  }
+ 
+  function loaderrorCallback(error) {
+     console.log('Loading error: ' + error.message)
+  }
+ 
+  function exitCallback() {
+     console.log('Browser is closed...')
+  }
+ }
+
+ function openBrowser2() {
+  var url = 'https://www.coolmath.com/';
+  var target = '_blank';
+  var options = "location = yes"
+  var ref = cordova.InAppBrowser.open(url, target, options);
+  
+  ref.addEventListener('loadstart', loadstartCallback);
+  ref.addEventListener('loadstop', loadstopCallback);
+  ref.addEventListener('loaderror', loaderrorCallback);
+  ref.addEventListener('exit', exitCallback);
+ 
+  function loadstartCallback(event) {
+     console.log('Loading started: '  + event.url)
+  }
+ 
+  function loadstopCallback(event) {
+     console.log('Loading finished: ' + event.url)
+  }
+ 
+  function loaderrorCallback(error) {
+     console.log('Loading error: ' + error.message)
+  }
+ 
+  function exitCallback() {
+     console.log('Browser is closed...')
+  }
+ }
+
+ 
+
 //----------------------------------------------- LOCAL STORAGE -----------------------------------
 
 function changerNom(){
-  Nom = window.prompt('Entre votre nouveau prénom :');
-  localStorage["prenom"] = Nom;
-  alert("Merci de redémarrer l'application pour que le changement prenne effet");
+  prenom = window.prompt('Mon petit comment tu t\'appelles ?');
+  localStorage["prenom"] = prenom;
+  alert("Super, vous avez changé de nom !");
 }
 
 if(localStorage.getItem('prenom') == ""){
   localStorage.removeItem('prenom');
 }else{
-//j'avais envie de mettre un else  
+// 
 }
 
 const titre = document.getElementById('bjr')
 if (localStorage.getItem('prenom') != null){
   titre.textContent = "Salut, "+ localStorage.prenom + " 😆";
 }else{
-  titre.textContent = "Bonjour !";
+  titre.textContent = "Salut !";
 }
 
-//-------------------------------------------------
+//--------------------fingerprint-----------------------------
 
 function fingerprint() {
   Fingerprint.show(
@@ -351,3 +418,22 @@ function fingerprint() {
   }
   console.log("fingerprint");
 }
+
+function getDate() {
+  var date = new Date();
+
+  var options = {
+     formatLength:'short',
+     selector:'date and time'
+  }
+  navigator.globalization.dateToString(date, onSuccess, onError, options);
+
+  function onSuccess(date) {
+     alert(`La date du jour est : ${date.value}`);
+  }
+
+  function onError(){
+     alert('Error getting dateString');
+  }
+}
+

@@ -127,6 +127,10 @@ h6 {
   background: linear-gradient(45deg, #ee9eac, #dda8b1);
 }
 
+.bg-c-Shiro {
+  background: linear-gradient(45deg, #d59eeb, #c268ec);
+}
+
 .bg-c-BlancNeutre {
   background: linear-gradient(45deg, #222222, #000000);
 }

@@ -1,21 +1,21 @@
-salut<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css2.css">
+    
     <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
     <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
     <!-- <script src="js/app.js"></script>
     <script src="js/index.js"></script> -->
-    <title>Page WEB MENU</title>
+    <title>Avancé</title>
 
 
 </head>
 <body>
-    <p id="batterie"></p>
     <div class="container">
         <div class="row">
 
@@ -23,16 +23,10 @@ salut<!DOCTYPE html>
                 <div class="card bg-c-white order-card">
                     <div class="card-block">
                         
-                        <h6 class="m-b-20" id="Bonjour">Bonjour et bienvenue.</h6>
-                        <p class="m-b-0">Tu possèdes 
-                            <script>
-                                document.getElementById("battery").innerHTML = info.level+" %";
-                            </script><i class="fas fa-battery-three-quarters"></i></p><br>
-                        <p id="batterie"></p>
-
-                        <P>Nous sommes le $date <i class="fas fa-table"></i></P>
-                        <p>Tu utilises la connexion <button onclick="networkInfo()" id = "networkInfo">Voir Réseau</button></p>
-                        <p>Tu es connecté depuis $time <i class="fas fa-clock"></i></p>
+                        <h6 class="m-b-20" id="Bonjour">Page 2</h6>
+                        <P>Nous sommes le <button onclick="getDate()" id ="getDate">$date</button><i class="fas fa-table"></i></P>
+                        <p>L'enfant utilise la connexion <button onclick="networkInfo()" id = "networkInfo">Voir Réseau</button></p>
+                        <p>Il est connecté depuis $time <i class="fas fa-clock"></i></p>
                         <h2 class="text-right"><span></span></h2>
                         <p class="m-b-0">Infos <span class="f-right">🖼</span></p>
                     </div>
@@ -40,20 +34,21 @@ salut<!DOCTYPE html>
             </div>
 
 <!-- ========================================================== Météo ================================================== -->
-            <div class="col-md-4 col-xl-3">
+            <!-- <div class="col-md-4 col-xl-3">
                 <div class="card bg-c-meteoMoche order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Météo à </h6>
+                        <p id="lieu"></p><div id="meteo"></div>
                         <h2 class="text-right"></i><span>💧 ou 🌞</span></h2>
                         <p class="m-b-0">Quel temps fait-il aujourd'hui ?<span class="f-right">0</span></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 <!-- ========================================================== Flash ================================================== -->
 
 
-            <a href="1.lamp.html"><div class="col-md-4 col-xl-3">
+            <a href="1-flash.html"><div class="col-md-4 col-xl-3">
                 <div class="card bg-c-blue order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Lampe Torche</h6>
@@ -67,12 +62,12 @@ salut<!DOCTYPE html>
 <!-- ========================================================== Micro ================================================== -->
 
             
-            <a href="2.mic.html"><div class="col-md-4 col-xl-3">
+            <a href="3-micro.html"><div class="col-md-4 col-xl-3">
                 <div class="card bg-c-green order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Microphone</h6>
                         <h2 class="text-right"></i><span>🎙</span></h2>
-                        <p class="m-b-0">Fait vibrer ta voix<span class="f-right">2</span></p>
+                        <p class="m-b-0">Fait vibrer ta voix<span class="f-right">1</span></p>
                     </div>
                 </div>
             </div></a>
@@ -80,24 +75,24 @@ salut<!DOCTYPE html>
 
 <!-- ========================================================== SoundBord ================================================== -->
             
-            <div class="col-md-4 col-xl-3">
+        <a href="4-sound.html"><div class="col-md-4 col-xl-3">
                 <div class="card bg-c-greenLIGHT order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">SoundBoard</h6>
                         <h2 class="text-right"><i class="fa fa-refresh f-left"></i><span>🎛</span></h2>
-                        <p class="m-b-0">Fais tes sons classes<span class="f-right">3</span></p>
+                        <p class="m-b-0">Fais tes sons classes<span class="f-right">2</span></p>
                     </div>
                 </div>
-            </div>
+            </div></a>
 
 <!-- ========================================================== AppPhoto ================================================== -->
             
-            <a href="4.photo.html"><div class="col-md-4 col-xl-3">
+            <a href="2-photo.html"><div class="col-md-4 col-xl-3">
                 <div class="card bg-c-yellow order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Appareil photo</h6>
                         <h2 class="text-right"><i class="fa fa-refresh f-left"></i><span>📹</span></h2>
-                        <p class="m-b-0">Pour un max de barres !<span class="f-right">4</span></p>
+                        <p class="m-b-0">Pour un max de barres !<span class="f-right">3</span></p>
                     </div>
                 </div>
             </div></a>
@@ -107,12 +102,12 @@ salut<!DOCTYPE html>
                     <div class="card-block">
                         <h6 class="m-b-20">Youtube Kids</h6>
                         <h2 class="text-right"></i><span>👶🏻</span></h2>
-                        <p class="m-b-0">Ouvrir Youtube<span class="f-right">5</span></p>
+                        <p class="m-b-0">Ouvrir Youtube<span class="f-right">4</span></p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 col-xl-3">
+            <!-- <div class="col-md-4 col-xl-3">
                 <div class="card bg-c-pink order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Téléphone</h6>
@@ -120,9 +115,9 @@ salut<!DOCTYPE html>
                         <p class="m-b-0">Pour appeller tes amis<span class="f-right">6</span></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-md-4 col-xl-3">
+            <!-- <div class="col-md-4 col-xl-3">
                 <div class="card bg-c-pinkPINK order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">GPS</h6>
@@ -130,20 +125,46 @@ salut<!DOCTYPE html>
                         <p class="m-b-0">Pour ne pas se perdre<span class="f-right">7</span></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-md-4 col-xl-3">
-                <div class="card bg-c-BlancNeutre order-card">
+            <a href="navi.html"> <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-Shiro order-card">
                     <div class="card-block">
                         <h6 class="m-b-20">Navigateur</h6>
                         <h2 class="text-right"></i><span>🌍</span></h2>
-                        <p class="m-b-0">Pour découvrir l'internet mondial<span class="f-right">8</span></p>
+                        <p class="m-b-0">Découvrir l'internet mondial<span class="f-right">5</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a href="99.test.html">test</a>
+
+    <a href="6-options.html"><div class="col-md-4 col-xl-3">
+                <div class="card bg-c-BlancNeutre order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Options</h6>
+                        <h2 class="text-right"></i><span>⚙️</span></h2>
+                        <p class="m-b-0">Modifier des paramètres<span class="f-right">5</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></a>
+
+    <a href="index1.html"><div class="col-md-4 col-xl-3">
+        <div class="card bg-c-BlancNeutre order-card">
+            <div class="card-block">
+                <h6 class="m-b-20">Retour</h6>
+                <h2 class="text-right"></i><span>🏠</span></h2>
+                <p class="m-b-0">Revenir au menu principal 🥸<span class="f-right">5</span></p>
+            </div>
+        </div>
+    </div></a>
+
+</div>
+</div>
+
+    <!-- <a href="99.test.html">test</a> -->
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
 </body>
