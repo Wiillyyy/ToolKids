@@ -1,0 +1,15 @@
+<script>var date = new Date();
+    var Vnom = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDay() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    var src = (Vnom + ".mp3");
+    console.log(Vnom);
+    var mediaRec = new Media(src,
+        // success callback
+        function () {
+            console.log("recordAudio():Audio Success");
+        },
+
+        // error callback
+        function (err) {
+            console.log("recordAudio():Audio Error: " + err.code);
+        }
+    );</script>
