@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
     <link href="assets/fontawesome/css/solid.css" rel="stylesheet" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/"/>
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Flashlight</title>
+    <title>Contacts</title>
   </head>
   <body>
 <div>
@@ -24,18 +24,21 @@
 
 <div>
   <h6 style="text-align: center; font-size: x-large; color: whitesmoke; margin: 10px;" id="Use">
-    Enregistre toi et deviens la nouvelle star des réseaux</h6></div>
+    Manipule tes contacts </h6></div>
     
 <div>
-    <button class="w-100 btn btn-lg btn-primary">Record</button>
-
+    <button class="w-100 btn btn-lg btn-primary" id = "createContact" onclick="createContact()">Ajouter un nouvel ami</button><br>
+    <button class="w-100 btn btn-lg btn-primary" id = "findContact" onclick="findContacts()">Lister les amis</button><br>
+    <button class="w-100 btn btn-lg btn-primary" id = "deleteContact" onclick="deleteContact()">Supprimer un copinou</button><br>
 </div>
 <div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
    
-  
+    <div>
+    <html>
 <body>
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/index.js"></script>
   </body>
+    </html>

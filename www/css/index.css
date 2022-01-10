@@ -266,16 +266,16 @@ html {
     --glow-spread-color: rgba(255, 215, 15);
     --enhanced-glow-color: rgb(255, 210, 2);
     --btn-color: rgb(255, 234, 0);
-    border: .10em solid var(--glow-color);
+    border: .18em solid var(--glow-color);
     color: var(--glow-color);
     font-size: 11px;
     font-weight: bold;
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
+    box-shadow: 0 0 1em .18em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
+           inset 0 0 .50em .18em var(--glow-color);
         position: absolute;
         border-radius: 15px;
         background: url("https://wallpapersmug.com/large/9c6e00/sunny-day-lakes-mountains.jpg");

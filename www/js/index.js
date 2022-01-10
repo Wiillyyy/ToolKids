@@ -22,6 +22,19 @@ function onDeviceReady(){
   document.getElementById("getCurrency").addEventListener("click", getCurrency);
   console.log(navigator.globalization);
   // Plugin pour la date
+
+  document.getElementById("createContact").addEventListener("click", createContact);
+  document.getElementById("findContact").addEventListener("click", findContacts);
+  document.getElementById("deleteContact").addEventListener("click", deleteContact);
+  // Plugin pour les contact
+
+document.getElementById("playAudio").addEventListener("click", playAudio);
+document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
+document.getElementById("stopAudio").addEventListener("click", stopAudio);
+document.getElementById("volumeUp").addEventListener("click", volumeUp);
+document.getElementById("volumeDown").addEventListener("click", volumeDown);
+// Plugin pour les audio
+console.log(navigator.device.capture);
 }
 //-------------------------------- BACK BUTTON -----------------------------------------
 
@@ -49,8 +62,7 @@ function cameraTakePicture() {
   } 
 }
 
-//------------------------------------------------------------------------------------
-
+//-----------------------------Device ready-----------------------------------
 document.addEventListener('deviceready', function(){
    onDeviceReady()
 })
@@ -93,7 +105,7 @@ const mainLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
 
 //------------------------------ MÉTÉO ----------------------------------------------------
 
-// !!!! Le code météo est dans la "code" de map et gps, afin de recup les info de lat et lng 
+// Le code météo est dans la "code" de map et gps, afin de recup les info de latitude et longitude 
 var callBackGetSuccess = function(data) {
    console.log("donnees api", data)
 
@@ -122,7 +134,7 @@ var callBackGetSuccess = function(data) {
 }}
 
 
-//--------------------- Change Wallpaper / page ------------------------
+//--------------------- Page d'acceuill into la page Principale ------------------------
 
 let togg1 = document.getElementById("togg1"); //selection des id des divs et bouttons
 let togg2 = document.getElementById("togg2");
@@ -148,62 +160,20 @@ function togg(){  //Cette fonction est liée à celle juste avant
 };
 togg1.onclick = togg;
 
-//-------------- Accueil -> more... -----------------
 
-togg2.addEventListener("click", () => {  // lors du clique passage en display none pour la première page et display block pour l'accueil
-   if(getComputedStyle(d3).display != "block"){ //on fait disparaitre la première et apparaitre la page d'accueil
-     d3.style.display = "block";     //ça nous évites de faire plusieurs fichiers html
-   } else {
-     d3.style.display = "none";
-   }
- })
- 
- function toggv2(){  //Cette fonction est liée à celle juste avant
-   if(getComputedStyle(d2).display != "none"){
-     d2.style.display = "none";
-   } else {
-     d2.style.display = "block";
-   }
- };
- togg2.onclick = toggv2;
-
-//------------- more... -> Accueil ---------------------
-
-togg3.addEventListener("click", () => {  // lors du clique passage en display none pour la première page et display block pour l'accueil
-   if(getComputedStyle(d2).display != "block"){ //on fait disparaitre la première page et apparaitre la page d'accueil
-     d2.style.display = "block";     //ça nous évites de faire plusieurs fichiers html
-   } else {
-     d2.style.display = "none";
-   }
- })
- 
- function toggv3(){  //Cette fonction est liée à celle juste avant
-   if(getComputedStyle(d3).display != "none"){
-     d3.style.display = "none";
-   } else {
-     d3.style.display = "block";
-   }
- };
- togg3.onclick = toggv3;
-
-const changebtn = document.querySelector(".btn");  //passage du fond dégradé sur fond blanc
-changebtn.addEventListener("click", ()=>{
-   const body = document.body;
-   body.style.background = "#1d3557";
-})
 
 //------------------------------------------- NETWORK -----------------------------------------------
 
 function networkInfo() {
   var networkState = navigator.connection.type;
   var states = {};
-  states[Connection.UNKNOWN]  = 'Inconnue';
+  states[Connection.UNKNOWN]  = 'Aucune connexion 🤔';
   states[Connection.ETHERNET] = 'Ethernet';
   states[Connection.WIFI]     = 'le WiFi, bien 👍';
-  states[Connection.CELL_2G]  = '2G';
-  states[Connection.CELL_3G]  = '3G';
-  states[Connection.CELL_4G]  = '4G';
-  states[Connection.CELL]     = 'Connexion generic';
+  states[Connection.CELL_2G]  = 'la 2G';
+  states[Connection.CELL_3G]  = 'la 3G';
+  states[Connection.CELL_4G]  = 'la 4G';
+  states[Connection.CELL]     = 'Connexion cellulaire';
   states[Connection.NONE]     = 'Aucune connexion 🤔';
   alert('Bravo mon petit ton téléphone utilise : ' + states[networkState]);
 }
@@ -223,70 +193,6 @@ const speed = document.querySelector('.speed');
 navigator.geolocation.watchPosition((data) => {
  speed.textContent ="Vitesse : "+ Math.round(data.coords.speed) + " km/h";
 });
-
-//------------------------------- PODOMETRE ---------------------------
-
-const podometre = document.querySelector('.podometre');
-const calorie = document.querySelector('.calorie');
-let app = {
-
- init: function() {
-
-   pedometer.isStepCountingAvailable(function(){
-       //alert(""Data available);
-   }, function(){
-       alert( "Le compteur n'est pas disponible sur votre appareil");
-   });
-
-   let successHandler = function (pedometerData) {
-
-      //alert(pedometerData.numberOfSteps);
-      podometre.textContent = "Nombre de pas : "+pedometerData.numberOfSteps;
-      calorie.textContent = "Calorie brulé :" + pedometerData.numberOfSteps * 0.04 + "kcal";
-
-   };
-   pedometer.startPedometerUpdates(successHandler, onError);
-
-   function onError(etext) {
-      alert("error="+JSON.stringify(etext));
-   };
- },
-}
-
-//--------------------------------- ORIENTATION -----------------------------
-const JeSuisOu = document.querySelector('.jesuisou');
-function getOrientation() {
- navigator.compass.getCurrentHeading(compassSuccess, compassError);
-
- function compassSuccess(heading) {
-    //alert('Orientation: ' + heading.magneticHeading+"°");
-    JeSuisOu.textContent = 'Orientation: ' + Math.round(heading.magneticHeading)+"°";
- };
-
- function compassError(error) {
-    alert('CompassError: ' + error.code);
- };
-}
-
-function watchOrientation(){
- var compassOptions = {
-    frequency: 3000
- }
- var watchID = navigator.compass.watchHeading(compassSuccess, 
-    compassError, compassOptions);
-
- function compassSuccess(heading) {
-    alert('Heading: ' + heading.magneticHeading);
-
-    setTimeout(function() {
-       navigator.compass.clearWatch(watchID);
-    }, 10000);
- };
-
- function compassError(error) {
-    alert('CompassError: ' + error.code);
- };
-}
 
 //-------------------------------------- Navigateur -------------------------------------------
 
@@ -374,9 +280,9 @@ function openBrowser1() {
   }
  }
 
- 
 
-//----------------------------------------------- LOCAL STORAGE -----------------------------------
+
+//----------------------------------------------- LOCAL STORAGE pour le Prenom-----------------------------------
 
 function changerNom(){
   prenom = window.prompt('Mon petit comment tu t\'appelles ?');
@@ -419,6 +325,10 @@ function fingerprint() {
   console.log("fingerprint");
 }
 
+
+//--------------------Date-----------------------------
+
+
 function getDate() {
   var date = new Date();
 
@@ -437,3 +347,92 @@ function getDate() {
   }
 }
 
+// ============================  Contact ======================================
+
+function createContact() {
+  var myContact = navigator.contacts.create({"displayName": prompt("Oh tu t'es fait un nouvel ami ? C'est quoi son prénom :")});
+  myContact.save(contactSuccess, contactError);
+   
+  function contactSuccess() {
+     alert("Bravoo tu as un nouvel ami 🧑🏻‍🤝‍🧑🏻");
+  }
+   
+  function contactError(message) {
+     alert('Oh nooon :(' + message);
+  }
+}
+
+function findContacts() {
+  var options = new ContactFindOptions();
+  options.filter = "";
+  options.multiple = true;
+  fields = ["displayName"];
+  navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
+   
+  function contactfindSuccess(contacts) {
+     for (var i = 0; i < contacts.length; i++) {
+        alert("Nom de ton ami =" + JSON.stringify(contacts[i].displayName));
+     }
+  }
+   
+  function contactfindError(message) {
+     alert('Failed because: ' + message);
+  }
+   
+}
+
+function deleteContact() {
+  var options = new ContactFindOptions();
+  options.filter = prompt("Tu t'es faché avec quelqu'un ? Quel est son prénom ?");
+  options.multiple = false;
+  fields = ["displayName"];
+  navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
+
+  function contactfindSuccess(contacts) {
+     var contact = contacts[0];
+     contact.remove(contactRemoveSuccess, contactRemoveError);
+
+     function contactRemoveSuccess(contact) {
+        alert("Méchant, ami, méchant, IL DÉGAGE ❌ !");
+     }
+
+     function contactRemoveError(message) {
+        alert('Failed because: ' + message);
+     }
+  }
+
+  function contactfindError(message) {
+     alert('Failed because: ' + message);
+  }
+}
+
+var myMedia = null;
+function playAudio() {
+   var src = "../audio/audio1.mp3";
+
+   if(myMedia === null) {
+      myMedia = new Media(src, onSuccess, onError);
+
+      function onSuccess() {
+         console.log("playAudio Success");
+      }
+
+      function onError(error) {
+         console.log("playAudio Error: " + error.code);
+      }
+   }
+   myMedia.play();
+}
+
+function pauseAudio() {
+  if(myMedia) {
+     myMedia.pause();
+  }
+}
+
+function stopAudio() {
+  if(myMedia) {
+     myMedia.stop(); 
+  }
+  myMedia = null;
+}
