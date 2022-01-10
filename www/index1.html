@@ -28,12 +28,13 @@
 
         <div id="d2" class="Accueil">
             <h1 id="bjr">Bonjour !</h1>
-            <button id = "networkInfo">Voir Réseau</button>
+            <button id = "networkInfo">Connecté ? 📶</button>
             <div id="idDiv_battery">
                 <p id="battery"></p>
             </div>
             <div class="c_meteo">
-                <p id="lieu"></p>
+                <h6>Mon Petit, tu es à :</h6>
+                <p id="lieu"></p> <h6>Dehors il fait :</h6>
                 <div id="meteo"></div>
             </div>
             <div>
@@ -44,33 +45,31 @@
             </div> <br>
             
             <div id="container_map">
-            <div id="map">Activer le GPS !</div> <br>
-            </div>
+            <div id="map"><br><br>Petit pour jouer avec dora <br> allume le GPS ! 🤦‍♀️</div> <br>
+            </div> <h6 class="textcarte">Voici la carte !</h6>
             <button id="togg2">Page 2</button>
         </div>
 
 
         <div id="d3">
-            <div id="camera">
+            <!-- <div id="camera">
                 <img id="myImage">
                 <button id="cameraTakePicture">Prendre une ptite photo</button> <br>
-            </div>
+            </div> -->
             <button id="togg3">Retour</button> <br>
             
-            <a href="index2.html">
-                <button id = "getOrientation">a voir</button></a>
+            <a href="index2.html"><button id ="Options1">Page 3</button></a>
             <button id = "watchOrientation">WATCH ORIENTATION</button>
 
             <div class="vitesse">
-                <p class="speed"></p>
+                <!-- <p class="speed"></p>
                 <p class="jesuisou">Orientation :</p>
                 <p class="podometre">Compteur de pas :</p>
-                <p class="calorie">Calorie brulé : </p>
+                <p class="calorie">Calorie brulé : </p> -->
             </div>
-        
             <button id="name" onclick="changerNom()">Changer de nom</button>
             <button id="flash" onclick="window.plugins.flashlight.toggle()">Allumer/Eteindre la lampe torche 💡</button>
-            <button id="browser" onclick="openBrowser()">Explorer internet 🔵</button>
+            <button id="browser" class="navigateur" onclick="openBrowser()">Va sur internet comme les grands🔵</button>
         </div>
 
         

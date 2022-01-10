@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="fr.smb.univ.zlojow.toolkids" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Trail's</name>
+    <name>Toolkids</name>
     <description>
-        La meilleure application pour randonneur !!
+        La meilleure application pour les enfants !
     </description>
     <author email="contact@williamzlojo.fr" href="">
         William Zlojo

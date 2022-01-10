@@ -49,7 +49,7 @@ document.addEventListener('deviceready', function(){
 // ---------------------------- BATTERIE -------------------------------------
 
 function onBatteryStatus(info) { 
-   document.getElementById("battery").innerHTML ="Tu vas pouvoir t'amuser il te reste : " + info.level+" %";
+   document.getElementById("battery").innerHTML ="Tu vas pouvoir t'amuser il te reste : " + info.level+" % de 📱";
 }
  //----------------------------- GPS + MAP --------------------------------------
 
@@ -59,7 +59,7 @@ function supermap(){
 if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(showPosition);
    } else { 
-     x.innerHTML = "Geolocation is not supported by this browser.";
+     x.innerHTML = "Geolocation pas supporté bichette.";
 }
  
 function showPosition(position) {
@@ -190,21 +190,21 @@ function networkInfo() {
   var states = {};
   states[Connection.UNKNOWN]  = 'Inconnue';
   states[Connection.ETHERNET] = 'Ethernet';
-  states[Connection.WIFI]     = 'WiFi';
+  states[Connection.WIFI]     = 'le WiFi, bien 👍';
   states[Connection.CELL_2G]  = '2G';
   states[Connection.CELL_3G]  = '3G';
   states[Connection.CELL_4G]  = '4G';
-  states[Connection.CELL]     = 'Cell generic connection';
-  states[Connection.NONE]     = 'Aucune connexion';
-  alert('Type de connexion: ' + states[networkState]);
+  states[Connection.CELL]     = 'Connexion generic';
+  states[Connection.NONE]     = 'Aucune connexion 🤔';
+  alert('Bravo mon petit ton téléphone utilise : ' + states[networkState]);
 }
 
 function onOffline() {
-  alert('Vous êtes maintenant hors-ligne!');
+  alert('Oh bah zut maman elle a coupé la WiFi 😭');
 }
 
 function onOnline() {
-  alert('Vous êtes maintenant en ligne!');
+  alert('Yes, le contrôle parental est parti tu peux jouer a la carte avec Dora 😎');
 }
 
 //------------------------------- VITESSE ----------------------------
@@ -279,10 +279,10 @@ function watchOrientation(){
  };
 }
 
-//-------------------------------------- BROWSER -------------------------------------------
+//-------------------------------------- Navigateur -------------------------------------------
 
 function openBrowser() {
- var url = 'https://www.annecyguidesmontagne.com/';
+ var url = 'https://m.kiddle.co/';
  var target = '_blank';
  var options = "location = yes"
  var ref = cordova.InAppBrowser.open(url, target, options);
@@ -325,7 +325,7 @@ if(localStorage.getItem('prenom') == ""){
 
 const titre = document.getElementById('bjr')
 if (localStorage.getItem('prenom') != null){
-  titre.textContent = "Bonjour, "+ localStorage.prenom + " !";
+  titre.textContent = "Salut, "+ localStorage.prenom + " 😆";
 }else{
   titre.textContent = "Bonjour !";
 }
