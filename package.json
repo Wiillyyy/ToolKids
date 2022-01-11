@@ -28,8 +28,8 @@
     "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-media-capture": "^3.0.3",
+    "cordova-plugin-microphone": "^0.0.1",
     "cordova-plugin-network-information": "^3.0.0",
-    "cordova-plugin-pedometer": "^0.4.1",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-plugin-splashscreen": "^6.0.0",
     "cordova-plugin-statusbar": "^3.0.0",
@@ -42,7 +42,6 @@
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
       },
-      "cordova-plugin-pedometer": {},
       "cordova-plugin-battery-status": {},
       "cordova-custom-config": {},
       "cordova-plugin-screen-orientation": {},
@@ -59,7 +58,8 @@
       "cordova-plugin-media": {},
       "cordova-plugin-contacts": {},
       "cordova-plugin-flashlight": {},
-      "cordova-plugin-media-capture": {}
+      "cordova-plugin-media-capture": {},
+      "com.bandpad.cordova.microphone": {}
     },
     "platforms": [
       "android"
