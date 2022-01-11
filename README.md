@@ -1,5 +1,5 @@
 # ToolKids
-Projet Android de 2' Année 📚 /// Cordova - Linux - HTML
+Projet Android de 2' Année 📚 /// Cordova - Linux - HTML<br>
 Voici, ma petite application Cordova, j'espère que vous l'apprécirez 
 
 La liste des plugins :
