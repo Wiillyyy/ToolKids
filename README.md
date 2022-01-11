@@ -25,5 +25,7 @@ La liste des plugins :
 | Navigateur Web | cordova-plugin-inappbrowser |
 | Date | cordova-plugin-globalization |
 | NetworkMonitor | cordova-plugin-network-information |
+> **`Asynchrone`** Besoin d'une réponse d'un serveur
+> 
 
 ❌ = Marche pas (encore)
