@@ -36,15 +36,10 @@ document.getElementById("volumeDown").addEventListener("click", volumeDown);
 // Plugin pour les audio
 console.log(navigator.device.capture);
 }
-//-------------------------------- BACK BUTTON -----------------------------------------
 
-// document.addEventListener("backbutton", function (e){
-//   e.preventDefault();
-//   location.href = "#d2";
-// }, false);
 
-// -------------------------- CAMERA -------------------------------
-
+// -------------------------- CAMERA -------------------------------//
+                                                                     
 function cameraTakePicture() { 
   navigator.camera.getPicture(onSuccess, onFail, {  
      quality: 50, 
@@ -61,6 +56,7 @@ function cameraTakePicture() {
      alert('Failed because: ' + message); 
   } 
 }
+// -------------------------- fin CAMERA -------------------------------//
 
 //-----------------------------Device ready-----------------------------------
 document.addEventListener('deviceready', function(){
@@ -72,7 +68,8 @@ document.addEventListener('deviceready', function(){
 function onBatteryStatus(info) { 
    document.getElementById("battery").innerHTML ="Oulah on va s'amuser là il reste : " + info.level+" % de 📱";
 }
- //----------------------------- GPS + MAP --------------------------------------
+
+ //----------------------------- Fonct. GPS + Mini Carte --------------------------------------
 
  const x = document.getElementById("div_id0");
  const y = document.getElementById("div_id1");
@@ -80,7 +77,7 @@ function supermap(){
 if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(showPosition);
    } else { 
-     x.innerHTML = "Geolocation pas supporté bichette.";
+     x.innerHTML = "Geolocation pas supporté mon petit.";
 }
  
 function showPosition(position) {
@@ -134,24 +131,22 @@ var callBackGetSuccess = function(data) {
 }}
 
 
-//--------------------- Page d'acceuill into la page Principale ------------------------
+//--------------------- Page d'acceuill intro la page Principale ------------------------
 
-let togg1 = document.getElementById("togg1"); //selection des id des divs et bouttons
+let togg1 = document.getElementById("togg1"); // selection des id des divs pour la page principale
 let togg2 = document.getElementById("togg2");
-let togg3 = document.getElementById("togg3");
 let d1 = document.getElementById("d1");
 let d2 = document.getElementById("d2");
-let d3 = document.getElementById("d3");
 let idbody = document.getElementById("id_body");
-togg1.addEventListener("click", () => {  // lors du clique passage en display none pour la première page et display block pour l'accueil
-  if(getComputedStyle(d2).display != "block"){ //on fait disparaitre la première et apparaitre la page d'accueil
-    d2.style.display = "block";     //ça nous évites de faire plusieurs fichiers html
+togg1.addEventListener("click", () => {   
+  if(getComputedStyle(d2).display != "block"){
+    d2.style.display = "block";     
   } else {
     d2.style.display = "none";
   }
 })
 
-function togg(){  //Cette fonction est liée à celle juste avant
+function togg(){  // la fonciton togg permet de passer de la page bébé, a la page Menu Principal
   if(getComputedStyle(d1).display != "none"){
     d1.style.display = "none";
   } else {
@@ -162,7 +157,7 @@ togg1.onclick = togg;
 
 
 
-//------------------------------------------- NETWORK -----------------------------------------------
+//------------------------------------------- NetworkInfo -----------------------------------------------
 
 function networkInfo() {
   var networkState = navigator.connection.type;
@@ -186,18 +181,11 @@ function onOnline() {
   alert('Yes, le contrôle parental est parti tu peux jouer a la carte avec Dora 😎');
 }
 
-//------------------------------- VITESSE ----------------------------
-
-const speed = document.querySelector('.speed');
-
-navigator.geolocation.watchPosition((data) => {
- speed.textContent ="Vitesse : "+ Math.round(data.coords.speed) + " km/h";
-});
 
 //-------------------------------------- Navigateur -------------------------------------------
 
 function openBrowser() {
- var url = 'https://m.kiddle.co/';
+ var url = 'https://m.kiddle.co/';  // Kiddle site web Enfant
  var target = '_blank';
  var options = "location = yes"
  var ref = cordova.InAppBrowser.open(url, target, options);
@@ -225,7 +213,7 @@ function openBrowser() {
 }
 
 function openBrowser1() {
-  var url = 'https://www.sesamestreet.org/';
+  var url = 'https://www.sesamestreet.org/'; // Sesamestreet pour dessiner
   var target = '_blank';
   var options = "location = yes"
   var ref = cordova.InAppBrowser.open(url, target, options);
@@ -253,7 +241,7 @@ function openBrowser1() {
  }
 
  function openBrowser2() {
-  var url = 'https://www.coolmath.com/';
+  var url = 'https://www.coolmath.com/'; // Coolmath pour faire des calculs
   var target = '_blank';
   var options = "location = yes"
   var ref = cordova.InAppBrowser.open(url, target, options);
@@ -303,7 +291,7 @@ if (localStorage.getItem('prenom') != null){
   titre.textContent = "Salut !";
 }
 
-//--------------------fingerprint-----------------------------
+//-------------------- fingerprint boutton-----------------------------
 
 function fingerprint() {
   Fingerprint.show(
@@ -320,13 +308,13 @@ function fingerprint() {
   }
 
   function errorCallback(error) {
-    alert("Mauvais doigt ou lâche le téléphone de ton copain");
+    alert("Oh Voleur ! lâche le téléphone de ton copain");
   }
   console.log("fingerprint");
 }
 
 
-//--------------------Date-----------------------------
+//-------------------- Date -----------------------------
 
 
 function getDate() {
@@ -343,7 +331,7 @@ function getDate() {
   }
 
   function onError(){
-     alert('Error getting dateString');
+     alert('Mince, on dirait que une erreur est survenue, merci de redemarrer l\'application');
   }
 }
 
@@ -358,7 +346,7 @@ function createContact() {
   }
    
   function contactError(message) {
-     alert('Oh nooon :(' + message);
+     alert('Erreur, redemarre !' + message);
   }
 }
 
@@ -376,7 +364,7 @@ function findContacts() {
   }
    
   function contactfindError(message) {
-     alert('Failed because: ' + message);
+     alert('Erreur, redemarre !' + message);
   }
    
 }
@@ -397,14 +385,16 @@ function deleteContact() {
      }
 
      function contactRemoveError(message) {
-        alert('Failed because: ' + message);
+        alert('Erreur, redemarre !' + message);
      }
   }
 
   function contactfindError(message) {
-     alert('Failed because: ' + message);
+     alert('Erreur, redemarre !' + message);
   }
 }
+
+// ============================  Media ======================================
 
 var myMedia = null;
 function playAudio() {
@@ -418,7 +408,7 @@ function playAudio() {
       }
 
       function onError(error) {
-         console.log("playAudio Error: " + error.code);
+         console.log("Erreur lors de l'audio" + error.code);
       }
    }
    myMedia.play();
@@ -435,4 +425,69 @@ function stopAudio() {
      myMedia.stop(); 
   }
   myMedia = null;
+}
+
+
+// ============================  Flashlight ======================================
+
+function sosLight() {
+   window.plugins.flashlight.available(function (isAvailable) {
+      if (isAvailable) {
+          var n = 0;
+          while (n <= 100) { // 
+              // switch on
+              window.plugins.flashlight.switchOn();
+
+              // Spam flash LED
+              setTimeout(function () {
+                  window.plugins.flashlight.switchOff(); // 
+              }, 50 + n * 100);
+
+              setTimeout(function () {
+                  window.plugins.flashlight.switchOn();
+              }, 100 + n * 100)
+
+              setTimeout(function () {
+                  window.plugins.flashlight.switchOff(); // 
+              }, 150 + n * 100);
+
+              n++;
+          }
+      } else {
+          alert("Flashlight non dispo, redemarre !");
+      }
+   });
+}
+
+function BonjourMorse() {
+   window.plugins.flashlight.available(function (isAvailable) {
+      if (isAvailable) {
+          var n = 0;
+          while (n <= 100) { // 
+              // switch on
+              window.plugins.flashlight.switchOn(
+                  function () { }, //
+                  function () { }, // 
+                  { intensity: 0.3 } // 
+              );
+
+              // Tentative de spammage doucement mais vu la maigre flexibilité du plugin, je n'ai pas réussi à le faire
+              setTimeout(function () {
+                  window.plugins.flashlight.switchOff(); // 
+              }, 10 + n * 80);
+
+              setTimeout(function () {
+                  window.plugins.flashlight.switchOn();
+              }, 210 + n * 120)
+
+            //   setTimeout(function () {
+            //       window.plugins.flashlight.switchOff(); //
+            //   }, 20 + n * 80);
+
+              n++;
+          }
+      } else {
+          alert("Flashlight non dispo, redemarre !");
+      }
+   });
 }

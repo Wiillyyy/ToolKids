@@ -33,16 +33,22 @@
 
 <!--------------- Fin de la première fade pour acceuillir l'enfant  ------------->
 
+<!--------------- Salut + localStorage  ------------->
+
         <div id="d2" class="Accueil">
             <h1 id="bjr">Hey !</h1>
             <script>var prenom1 = localStorage.getItem('prenom');
                 document.getElementById("bjr").innerHTML = "Faites places à " + prenom1 + " ! 😆";</script>
             
+<!--------------- Bouton NetworkInfo + batteryStatus ------------->
             </script>
-            <button id = "networkInfo">Connecté ? 📶</button>
+            <button onclick="networkInfo()" id ="networkInfo">Connecté ? 📶</button>
             <div id="idDiv_battery">
                 <p id="battery"></p>
             </div>
+
+<!--------------- GPS + Météo + info localisation ------------->
+
             <div class="c_meteo">
                 <h6>Mon Petit, tu es à :</h6>
                 <p id="lieu"></p> <h6>Dehors il fait :</h6>
@@ -51,8 +57,7 @@
             <div>
                 <p id="div_id0"></p>
                 <p id="div_id1"></p>
-                
-                
+                <p id="div_id2"></p>
             </div> <br>
             
             <div id="container_map">
@@ -64,27 +69,6 @@
         <!--------------- Fin de la deuxieme fade pour acceuillir l'enfant  ------------->
 
         <!--------------- Inutile  ------------->
-        <div id="d3">
-        <h1>Tu peux continuer à t'amuser ici 🤡</h1>
-            <div id="camera">
-                <img id="myImage">
-                <button id="cameraTakePicture">Prendre une ptite photo</button> <br>
-            </div>
-            <button id="togg3">⬅️</button> <br>
-            
-            <a href="index2.html"><button id ="Options1">➡️</button></a>
-            <!-- <button id = "watchOrientation">WATCH ORIENTATION</button> -->
-
-            <div class="vitesse">
-                <!-- <p class="speed"></p>
-                <p class="jesuisou">Orientation :</p>
-                <p class="podometre">Compteur de pas :</p>
-                <p class="calorie">Calorie brulé : </p> -->
-            </div>
-            <!-- <button id="name" onclick="changerNom()">Changer de nom</button> -->
-            <button id="flash" onclick="window.plugins.flashlight.toggle()">Allumer/Eteindre la lampe torche 💡</button>
-            <button id="browser" class="navigateur" onclick="openBrowser()">Va sur internet comme les grands🔵</button>
-        </div>
         <!--------------- Inutile  ------------->
         <!--------------- Inutile  ------------->
 

@@ -210,19 +210,7 @@ html {
 
 /* --- END WELCOME PAGE --- */
 
-#d4{
-    display: none;
-}
 
-/* --- MORE... PAGE --- */
-
-
-
-
-#d3{
-    display: none;
-    background: url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
-}
 
 #myImage{
     height: 100px;
@@ -230,16 +218,6 @@ html {
     border: none;
 }
 
-.podometre{
-    color: white;
-    
-}
-.calorie{
-    color: white;
-}
-.jesuisou{
-    color: black;
-}
 
 /* --- END MORE... PAGE --- */
 
@@ -330,60 +308,6 @@ html {
     
     /*-------------------------------------------*/
 
-    #d3{
-        display: none;
-    }
-    #togg3{
-        --glow-color: rgb(217, 176, 255);
-        --glow-spread-color: rgba(191, 123, 255, 0.781);
-        --enhanced-glow-color: rgb(231, 206, 255);
-        --btn-color: rgb(100, 61, 136);
-        border: .25em solid var(--glow-color);
-        padding: 1em 3em;
-        color: var(--glow-color);
-        font-size: 15px;
-        font-weight: bold;
-        background-color: var(--btn-color);
-        border-radius: 1em;
-        outline: none;
-        box-shadow: 0 0 1em .25em var(--glow-color),
-               0 0 4em 1em var(--glow-spread-color),
-               inset 0 0 .75em .25em var(--glow-color);
-        text-shadow: 0 0 .5em var(--glow-color);
-        position: absolute;
-        top: 92%;
-        left: 30%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        border-radius: 30px;
-        border: solid 2px white;
-        color: white;
-        height: 50px;
-        width: 138px;
-    }
-    .vitesse{
-        display: flex;
-        padding: 5px;
-        position: absolute;
-        flex-direction: column;
-        border-radius: 10px;
-        background-color: white;
-        color: black;
-
-        height: 150px;
-        width: 300px;
-        bottom: 5vh;
-        top: 25%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-    .speed{
-        font-size: 15px;
-        color: black;
-        /*display: none;*/
-    }
     #camera{
         display: flex;
         flex-direction: column;
@@ -402,27 +326,7 @@ html {
         border: none;
     }
     
-    .podometre{
-        color: black;
-    }
-    .calorie{
-        color: black;
-    }
-    .internet{
-        position: absolute;
-        display: flex;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        flex-direction: row;
-        justify-content: center;
-        top: 40%;
-        border-radius: 10px;
-        background-color: white;
-        height: 50px;
-        width: 300px;
-
-    }
+ 
     #name{
         position: absolute;
         top: 80%;
@@ -442,17 +346,6 @@ html {
         
     }
 
-    #flash {
-        position: absolute;
-        top: 18.6%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        width: 300px;
-        height: 50px;
-        border-radius: 10px;
-        
-    }
     #Options1{
         --glow-color: rgb(217, 176, 255);
         --glow-spread-color: rgba(191, 123, 255, 0.781);
@@ -496,10 +389,7 @@ html {
         height: 50px;
         width: 138px;
     }
-    #watchOrientation{
-        position: absolute;
-        display: none;
-    }
+
 }
 
 @media screen and (min-width:700px) and (max-width: 800px) {
@@ -550,7 +440,6 @@ html {
         transform: translate(-50%, -50%);
     }  
 }
-
 .textcarte{
     position: absolute;
     top: 85%;
