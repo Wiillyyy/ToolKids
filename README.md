@@ -1,4 +1,5 @@
 # ToolKids
+<img src="https://img.shields.io/badge/Etat-FINI-green" width="25%">
 Projet Android de 2' Année 📚 /// Cordova - Linux - HTML<br>
 Voici, ma petite application Cordova, j'espère que vous l'apprécirez 
 
